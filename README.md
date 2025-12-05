@@ -251,7 +251,6 @@ Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 ## 🙋 Have Questions?
 
 - **Template questions:** Open an issue in this repository
-- **User group setup:** Contact community@qgis.org
 - **General QGIS questions:** Visit [qgis.org](https://qgis.org)
 
 ![-----------------------------------------------------](./img/green-gradient.png)
@@ -264,4 +263,4 @@ Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ![-----------------------------------------------------](./img/green-gradient.png)
 
-Made with ❤️ by the QGIS Community.
+Made with ❤️ by the QGIS Contributors.
