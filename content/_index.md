@@ -1,6 +1,6 @@
 ---
 type: "page"
-title: "QGIS Switzerland"
+title: "QGIS India"
 subtitle: "Connecting QGIS users in our community"
 draft: false
 heroSize: "is-medium"
@@ -14,7 +14,7 @@ ButtonLink: "events/"
 
 {{< content-start >}}
 
-## Welcome to the QGIS Switzerland User Group
+## Welcome to the QGIS India User Group
 
 We are a community of QGIS users passionate about open-source geospatial technology. Our mission is to promote the use of QGIS, share knowledge, and support each other in our geospatial projects.
 
