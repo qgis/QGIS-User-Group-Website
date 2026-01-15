@@ -27,7 +27,7 @@ Our mission is to:
 
 [Add your board members/organizers here]
 
-**President:** [Name]  
+**President:** [Deepak Kumar]  
 **Vice President:** [Name]  
 **Secretary:** [Name]  
 **Treasurer:** [Name]  
@@ -52,9 +52,9 @@ We welcome everyone interested in QGIS, from complete beginners to experienced p
 
 ## Contact Us
 
-- **Email:** [your-email@example.com]
+- **Email:** [kdcivil2020@gmail.com]
 - **Mailing List:** [link to mailing list]
-- **Social Media:** [links to social media]
+- **Social Media:** [https://x.com/itskrdeepak]
 - **Chat:** [link to chat platform if available]
 
 ## Affiliations
