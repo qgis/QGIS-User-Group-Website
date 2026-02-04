@@ -1,6 +1,6 @@
 # May be overwritten in .github/workflows/github-pages.yml or other config files
 # Update baseURL for your specific User Group deployment
-baseURL = 'https://yourgroup.qgis.org/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'QGIS [Country] User Group'
 theme = 'hugo-bulma-blocks-theme'

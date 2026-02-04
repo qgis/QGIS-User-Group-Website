@@ -10,7 +10,7 @@ sidebar: true
 
 # Case Studies
 
-Showcasing projects, implementations, and impact stories from the QGIS India community.
+Showcasing projects, implementations, and impact stories from the QGIS community.
 
 {{< columns-start >}}
 {{< column-start class="is-flex-direction-column is-full">}}
@@ -30,7 +30,7 @@ Showcasing projects, implementations, and impact stories from the QGIS India com
 {{< rich-content-start themeClass="coloring-1" >}}
 ##### Submit a Case Study
 
-Have a project to feature? Share details at [case-studies@in.qgis.org].
+Have a project to feature? Share details at [case-studies@example.com].
 
 {{< rich-content-end >}}
 {{< rich-box-end >}}

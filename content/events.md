@@ -79,7 +79,7 @@ Check back regularly for upcoming workshop announcements.
 [Add information about past events, presentations, or links to recordings]
 
 
-{{< rich-box-start icon="💁" layoutClass="tips">}}
+{{< rich-box-start layoutClass="tips">}}
 {{< rich-content-start themeClass="coloring-1" >}}
 ##### Get Involved
 
