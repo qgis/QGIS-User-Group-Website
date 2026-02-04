@@ -21,11 +21,11 @@ Stay updated with our upcoming meetups, workshops, and conferences. Join us to l
 When: [Date]  
 Where: [City / Online]
 
-{{< button class = "is-primary1" link = "#" text = "Details coming soon" >}} 
+{{< button class = "is-primary1" link = "https://usergroup.qgis.org/" text = "Learn more" >}} 
 
 {{< rich-content-end >}}
 {{< rich-right-start >}}
-![](/img/hegobg1.webp)
+![](https://usergroup.qgis.org/visualization_center.webp)
 {{< rich-right-end >}}
 {{< rich-box-end >}}
 
@@ -44,9 +44,9 @@ We organize regular meetups where members can:
 - Get help with QGIS challenges
 - Network with other users
 
-**When:** [Monthly/Quarterly schedule]  
-**Where:** [Venues / Online]  
-**Registration:** [Registration link]
+**When:** [Add your meeting schedule]  
+**Where:** [Add your meeting location/online platform]  
+**Registration:** [Add registration information]
 
 
 {{< rich-content-end >}}
@@ -79,11 +79,11 @@ Check back regularly for upcoming workshop announcements.
 [Add information about past events, presentations, or links to recordings]
 
 
-{{< rich-box-start layoutClass="tips">}}
+{{< rich-box-start icon="💁" layoutClass="tips">}}
 {{< rich-content-start themeClass="coloring-1" >}}
 ##### Get Involved
 
-Want to present at our next meetup or organize an event? Contact us at [events@example.com]
+Want to present at our next meetup or organize an event? Contact us at [your-contact-email]
 
 
 {{< rich-content-end >}}

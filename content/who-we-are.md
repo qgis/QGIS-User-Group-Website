@@ -50,10 +50,10 @@ We welcome everyone interested in QGIS, from complete beginners to experienced p
 
 ## Contact Us
 
-- **Email:** [contact@example.com]
+- **Email:** [your-email@example.com]
 - **Mailing List:** [link to mailing list]
 - **Social Media:** [links to social media]
-- **Chat:** [link to chat platform]
+- **Chat:** [link to chat platform if available]
 
 ## Affiliations
 
