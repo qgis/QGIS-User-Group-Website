@@ -43,3 +43,6 @@ node_modules/
 env
 core
 core
+
+# Local AI helper notes
+CLAUDE.md

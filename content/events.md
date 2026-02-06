@@ -10,16 +10,16 @@ sidebar: true
 
 # Events
 
-Stay updated with our upcoming meetups, workshops, and conferences. Join us to learn, share, and network with fellow QGIS enthusiasts!
+Stay updated with our upcoming meetups, workshops, and conferences. Join us to learn, share, and network with fellow QGIS enthusiasts.
 
 ## Upcoming Events
 
 {{< rich-box-start layoutClass="has-right rounded" >}}
 {{< rich-content-start themeClass="coloring-2" >}}
-### QGIS User Conference 2025
+### QGIS User Group Meetup (Placeholder)
 
-When: 2-3 June 2025  
-Where: Norrköping, Sweden
+When: [Date]  
+Where: [City / Online]
 
 {{< button class = "is-primary1" link = "https://usergroup.qgis.org/" text = "Learn more" >}} 
 

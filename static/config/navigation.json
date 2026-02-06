@@ -3,13 +3,27 @@
     {
       "type": "menu",
       "settings": {
-        "name": "QGIS Switzerland",
+        "name": "QGIS [Country]",
         "children": [
           {
             "type": "second-menu",
             "settings": {
               "name": "Home",
               "href": "/"
+            }
+          },
+          {
+            "type": "second-menu",
+            "settings": {
+              "name": "About Us",
+              "href": "/about-us/"
+            }
+          },
+          {
+            "type": "second-menu",
+            "settings": {
+              "name": "Case Studies",
+              "href": "/case-studies/"
             }
           },
           {
@@ -22,8 +36,22 @@
           {
             "type": "second-menu",
             "settings": {
-              "name": "Who we are",
-              "href": "/who-we-are/"
+              "name": "Community",
+              "href": "/community/"
+            }
+          },
+          {
+            "type": "second-menu",
+            "settings": {
+              "name": "Tutorials",
+              "href": "/tutorials/"
+            }
+          },
+          {
+            "type": "second-menu",
+            "settings": {
+              "name": "Blog",
+              "href": "/blog/"
             }
           },
           {

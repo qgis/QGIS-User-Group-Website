@@ -1,16 +1,17 @@
 ---
 type: "page"
-title: "Who We Are"
+title: "About Us"
 subtitle: "Meet our community"
 draft: false
 sidebar: true
+url: "/about-us/"
 ---
 
 {{< content-start >}}
 
-# Who We Are
+# About Us
 
-We are a dedicated group of QGIS users committed to promoting open-source geospatial technology and supporting our local community.
+We are a QGIS User Group, committed to promoting open-source geospatial technology and supporting practitioners.
 
 ## Our Mission
 
@@ -23,18 +24,15 @@ Our mission is to:
 
 ## Our Team
 
-### Board Members
+### Coordinators / Leadership
 
-[Add your board members/organizers here]
-
-**President:** [Name]  
-**Vice President:** [Name]  
-**Secretary:** [Name]  
-**Treasurer:** [Name]  
+- **Coordinator:** [Name]
+- **Regional/Local Leads:** [Names by region]
+- **Volunteers:** [Roles: outreach, events, training, comms]
 
 ### Active Members
 
-We have [X] active members from diverse backgrounds including:
+We have members from diverse backgrounds including:
 - GIS professionals
 - Environmental scientists
 - Urban planners

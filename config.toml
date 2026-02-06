@@ -143,19 +143,39 @@ sectionPagesMenu = 'main'
   weight = 10
 
 [[menu.main]]
-  name = "Events"
-  url = "/events/"
+  name = "About Us"
+  url = "/about-us/"
   weight = 20
 
 [[menu.main]]
-  name = "Who we are"
-  url = "/who-we-are/"
+  name = "Case Studies"
+  url = "/case-studies/"
   weight = 30
+
+[[menu.main]]
+  name = "Events"
+  url = "/events/"
+  weight = 40
+
+[[menu.main]]
+  name = "Community"
+  url = "/community/"
+  weight = 50
+
+[[menu.main]]
+  name = "Tutorials"
+  url = "/tutorials/"
+  weight = 60
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 70
 
 [[menu.main]]
   name = "Rules"
   url = "/rules/"
-  weight = 40
+  weight = 80
 
 [[menu.qgis_org]]
   name = "Project"

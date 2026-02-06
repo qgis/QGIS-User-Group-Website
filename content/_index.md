@@ -1,20 +1,20 @@
 ---
 type: "page"
-title: "QGIS Switzerland"
+title: "QGIS [Country]"
 subtitle: "Connecting QGIS users in our community"
 draft: false
 heroSize: "is-medium"
-heroLogo: "img/qgis_ch.png"
+heroLogo: "/img/qgis_ch.png"
 HeroImage: "/img/hegobg1.webp"
 HasBanner: true
 sidebar: true
 ButtonText: "Join Us!" 
-ButtonLink: "events/"
+ButtonLink: "/events/"
 ---
 
 {{< content-start >}}
 
-## Welcome to the QGIS Switzerland User Group
+## Welcome to the QGIS User Group
 
 We are a community of QGIS users passionate about open-source geospatial technology. Our mission is to promote the use of QGIS, share knowledge, and support each other in our geospatial projects.
 
@@ -52,7 +52,7 @@ We are a community of QGIS users passionate about open-source geospatial technol
 {{< rich-box-start >}}
 {{< rich-content-start themeClass="coloring-1" >}} 
 
-Whether you're a beginner or an experienced QGIS user, everyone is welcome! Join our events, participate in discussions, and help grow the QGIS community.
+Whether you're a beginner or an experienced QGIS user, everyone is welcome. Join our events, participate in discussions, and help grow the community.
 
 [See our upcoming events](/events/)
 
@@ -64,6 +64,6 @@ Whether you're a beginner or an experienced QGIS user, everyone is welcome! Join
 
 ## Get Involved
 
-We welcome new members and contributors! Check out our [Rules](/rules/) page to learn about our community guidelines, and visit [Who we are](/who-we-are/) to meet our team.
+We welcome new members and contributors. Check out our [Rules](/rules/) page to learn about our community guidelines, and visit [About Us](/about-us/) to meet our team and volunteers.
 
 {{< content-end >}}
