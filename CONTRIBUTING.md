@@ -67,7 +67,80 @@ dpkg -x hugo_extended_0.139.3_linux-amd64.deb
 
 ### 🪟 Windows
 
+# Setting Up QGIS Website Development Environment (WSL + Hugo)
 
+This guide provides a step-by-step workflow to set up a local development environment for the QGIS website using Windows Subsystem for Linux (WSL) and the Hugo static site generator.
+
+---
+
+## 1. Initialize WSL and Ubuntu
+WSL allows you to run a Linux environment directly on Windows without the overhead of a traditional virtual machine.
+
+1.  **Install WSL:** Open PowerShell (as a standard user) and run:
+    ```powershell
+    wsl --install
+    ```
+2.  **Verify & Reboot:** Check the status to ensure the subsystem is active:
+    ```powershell
+    wsl --status
+    ```
+    *Note: A system reboot is required after the initial installation to enable the necessary virtualization features.*
+
+3.  **Install Ubuntu 24.04:** After rebooting, install the specific distribution:
+    ```powershell
+    wsl --install Ubuntu-24.04
+    ```
+    *Launch **Ubuntu 24.04** from your Start Menu to complete the initial Linux user profile setup (username and password).*
+
+---
+
+## 2. Install Build Essentials and Hugo
+The QGIS website development workflow relies on `make` for automation and the `hugo` extended binary for rendering the site.
+
+1.  **Install Make:** Update your package lists and install the make utility:
+    ```bash
+    sudo apt update && sudo apt install make
+    ```
+2.  **Download Hugo (Extended Version):** We use the extended version specifically to support SCSS/SASS processing required by the QGIS website themes.
+    ```bash
+    wget [https://github.com/gohugoio/hugo/releases/download/v0.155.2/hugo_extended_0.155.2_linux-amd64.deb](https://github.com/gohugoio/hugo/releases/download/v0.155.2/hugo_extended_0.155.2_linux-amd64.deb)
+    ```
+3.  **Install the Package:**
+    ```bash
+    sudo dpkg -i hugo_extended_0.155.2_linux-amd64.deb
+    ```
+
+---
+
+## 3. Resolving Folder Permission Issues
+When working on a repository stored on your Windows file system (e.g., `/mnt/c/Users/...`), you may encounter errors during `git clone` or when Hugo tries to write to the disk. This is because WSL mounts Windows drives with different permission structures by default.
+
+To fix this, you must remount the drive with **metadata** enabled. This allows Linux to manage file permissions and ownership correctly on the Windows drive.
+
+1.  **Unmount the C: Drive:**
+    ```bash
+    sudo umount /mnt/c
+    ```
+2.  **Remount with Metadata:**
+    ```bash
+    sudo mount -t drvfs C: /mnt/c -o metadata
+    ```
+
+> **Note:** With these permissions set, you can now navigate to your project folder and clone the repository without write errors.
+
+---
+
+## 4. Clone the Repository
+Navigate to your preferred directory on your local Windows system via the WSL terminal and clone the repository:
+
+```bash
+# Example: Navigating to your user Documents folder
+cd /mnt/c/Users/YourUsername/Documents
+```
+
+# Clone the repository
+ git clone https://github.com/QGIS/QGIS-User-Group-Website.git
+cd qgis-website
 
 ### 🍏 macOS: 
 
