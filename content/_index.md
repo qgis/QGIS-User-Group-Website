@@ -4,8 +4,8 @@ title: "QGIS [Country]"
 subtitle: "Connecting QGIS users in our community"
 draft: false
 heroSize: "is-medium"
-heroLogo: "/img/qgis_ch.png"
-HeroImage: "/img/hegobg1.webp"
+heroLogo: "img/qgis_ch.png"
+HeroImage: "img/hegobg1.webp"
 HasBanner: true
 sidebar: true
 ButtonText: "Join Us!" 
