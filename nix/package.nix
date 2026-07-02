@@ -3,6 +3,7 @@
   stdenv,
   hugo,
   theme,
+  commitHash,
 }:
 
 stdenv.mkDerivation {
