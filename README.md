@@ -2,7 +2,7 @@
 
 > ## 👋 Welcome to the QGIS User Group Website Template!
 >
-> **This repository provides a template for creating QGIS User Group websites:**  
+> **This repository provides a template for creating QGIS User Group websites:**
 > 🌍 Hosted as subdomains of qgis.org (e.g., `yourgroup.qgis.org`)
 >
 > Here you'll find everything you need to **build, develop, and customize** your User Group Website.
@@ -57,7 +57,12 @@ The template uses Hugo static site generator with a clean, responsive design tha
    cd QGIS-User-Group-Website
    ```
 
-2. **Run the development server:**
+2. **Install submodule with QGIS website theme**
+   ```bash
+   git submodule update --init --recursive
+   ```
+
+3. **Run the development server:**
    ```bash
    make hugo-run-dev
    ```
@@ -66,7 +71,7 @@ The template uses Hugo static site generator with a clean, responsive design tha
    hugo server --config config.toml,config/config.dev.toml
    ```
 
-3. **View your site:**
+4. **View your site:**
    Open your browser to `http://localhost:1313`
 
 ![-----------------------------------------------------](./img/green-gradient.png)
@@ -133,7 +138,7 @@ After customizing your site:
 1. **Request subdomain deployment:**
    - Contact the QGIS team to request deployment
    - Provide your desired subdomain (e.g., `sweden.qgis.org`)
-   
+
 2. **The QGIS team will:**
    - Configure the subdomain on qgis.org
    - Set up automated deployment from your branch
@@ -199,7 +204,7 @@ Edit `config.toml` to customize:
 
 ### Navigation menu
 
-Edit the `layouts/partials/menu.html` file to customize:
+Edit the `themes/qgis-website-theme/layouts/partials/menu.html` file to customize:
 
 - `logo-icon`: The logo on the main navigation menu (by default: QGIS logo)
 - `logo-link`: The link where the logo points to (by default: qgis.org). You can set it to `/` if you want to point the logo the homepage of your user group website.
@@ -243,7 +248,7 @@ Please refer to the [Nix section](./CONTRIBUTING.md#nix) in [CONTRIBUTING.md](./
 
 ## ✨ Contributing
 
-We welcome contributions to improve this template! 
+We welcome contributions to improve this template!
 
 - **For template improvements:** Submit PRs to the main branch
 - **For your user group site:** Work on your dedicated branch
