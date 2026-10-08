@@ -1,395 +1,275 @@
-# ✨ Contributing to QGIS-User-Group-Website
+# 🌐 QGIS User Group Website Template
 
-Thank you for considering contributing to QGIS User Conference Website!
-We welcome contributions of all kinds, including bug fixes, feature requests,
-documentation improvements, and more. Please follow the guidelines below to
-ensure a smooth contribution process.
+> ## 👋 Welcome to the QGIS User Group Website Template!
+>
+> **This repository provides a template for creating QGIS User Group websites:**
+> 🌍 Hosted as subdomains of qgis.org (e.g., `yourgroup.qgis.org`)
+>
+> Here you'll find everything you need to **build, develop, and customize** your User Group Website.
+
+![-----------------------------------------------------](./img/green-gradient.png)
+
+<!-- TABLE OF CONTENTS -->
+<h2 id="table-of-contents"> 📖 Table of Contents</h2>
+
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#-project-overview"> 🚀 Project Overview </a></li>
+    <li><a href="#-getting-started"> 🎯 Getting Started </a></li>
+    <li><a href="#️-setting-up-your-user-group-site"> 🛠️ Setting Up Your User Group Site </a></li>
+    <li><a href="#-folder-structure"> 📂 Folder Structure </a></li>
+    <li><a href="#️-customizing-your-site"> ✏️ Customizing Your Site </a></li>
+    <li><a href="#-license"> 📜 License </a></li>
+    <li><a href="#-using-the-nix-shell"> 🧊 Using the Nix Shell </a></li>
+    <li><a href="#-contributing"> ✨ Contributing </a></li>
+  </ol>
+</details>
+
+![-----------------------------------------------------](./img/green-gradient.png)
+
+## 🚀 Project Overview
+
+This template is designed for QGIS User Groups to quickly set up a professional website with:
+
+- **Home page** - Welcome visitors and introduce your group
+- **Events page** - List upcoming and past events
+- **Who we are page** - Introduce your team and members
+- **Rules page** - Community guidelines and code of conduct
+
+The template uses Hugo static site generator with a clean, responsive design that maintains consistency with the QGIS ecosystem.
+
+![-----------------------------------------------------](./img/green-gradient.png)
+
+## 🎯 Getting Started
+
+### Prerequisites
+
+- Hugo (version 0.139.0 or higher)
+- Git
+- A text editor or an IDE (eg. VSCode)
+
+### Local Development
+
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/QGIS/QGIS-User-Group-Website.git
+   cd QGIS-User-Group-Website
+   ```
+
+2. **Install submodule with QGIS website theme**
+   ```bash
+   git submodule update --init --recursive
+   ```
+
+3. **Run the development server:**
+   ```bash
+   make hugo-run-dev
+   ```
+   Or directly with Hugo:
+   ```bash
+   hugo server --config config.toml,config/config.dev.toml
+   ```
+
+4. **View your site:**
+   Open your browser to `http://localhost:1313`
+
+![-----------------------------------------------------](./img/green-gradient.png)
+
+## 🛠️ Setting Up Your User Group Site
+
+### Step 1: Request a Branch
+
+To set up a website for your QGIS User Group:
+
+1. **Contact the QGIS Website Team:**
+   - Open an issue in [this repository](https://github.com/qgis/QGIS-User-Group-Website/issues) or
+   - Email the QGIS website team at [tim@kartoza.com](mailto:tim@kartoza.com) and [lova@kartoza.com](mailto:lova@kartoza.com)
+   - Specify your user group name and preferred subdomain (e.g., `sweden.qgis.org`)
+
+2. **Provide Information:**
+   - User Group name
+   - Country/region
+   - Preferred subdomain name
+   - Contact person(s) with GitHub usernames
+
+### Step 2: Branch Creation and Permissions
+
+The QGIS team will:
+
+1. Create a dedicated branch for your user group (e.g., `usergroup/sweden`)
+2. Set up branch protection rules
+3. Grant you write permissions to your branch
+4. Configure GitHub Actions for automated deployment
+
+### Step 3: Configure Your Branch
+
+Once your branch is ready:
+
+1. **Clone and checkout your branch:**
+   ```bash
+   git clone https://github.com/qgis/QGIS-User-Group-Website.git
+   cd QGIS-User-Group-Website
+   git checkout usergroup/your-group-name
+   ```
+
+2. **Update configuration:**
+   - Edit `config.toml` with your group details
+   - Update the `baseURL` to match your subdomain
+   - Customize the title and other settings
+
+3. **Customize content:**
+   - Edit content pages in the `content/` directory
+   - Add your team information
+   - Update events and rules
+   - Replace placeholder images
+
+4. **Commit and push:**
+   ```bash
+   git add .
+   git commit -m "Initial customization for [Your Group Name]"
+   git push origin usergroup/your-group-name
+   ```
+
+### Step 4: Request Deployment
+
+After customizing your site:
+
+1. **Request subdomain deployment:**
+   - Contact the QGIS team to request deployment
+   - Provide your desired subdomain (e.g., `sweden.qgis.org`)
+
+2. **The QGIS team will:**
+   - Configure the subdomain on qgis.org
+   - Set up automated deployment from your branch
+   - Provide you with the live URL
+
+### Managing Your Branch
+
+You have full control over your branch:
+
+- **Push changes:** Changes pushed to your branch will automatically deploy
+- **Collaborate:** Add other team members as collaborators on your branch
+- **Keep updated:** Periodically merge updates from the main template branch to get new features
+
+![-----------------------------------------------------](./img/green-gradient.png)
+
+## 📂 Folder Structure
+
+```plaintext
+QGIS-User-Group-Website/
+  ├── ⚙️  config/           # Hugo configuration files
+  ├── 📄  content/          # Markdown content files (pages, posts)
+  ├── 🖼️  img/              # Images files used by this README
+  ├── 🧩  layouts/          # Hugo templates and partials
+  ├── 📦  public/           # Generated site output (after `hugo` build)
+  ├── 🗂️  resources/        # Hugo-generated resources (e.g., minified assets)
+  ├── 📄  static/           # Static files served as-is (e.g., favicon, images)
+  ├── 🎨  themes/           # Hugo themes
+  ├── ⚙️  config.toml       # Main Hugo configuration file
+  ├── 🤝  CONTRIBUTING.md   # Contribution guidelines
+  ├── 📜  LICENSE           # Project license
+  ├── ⚙️  Makefile          # Build/Deployment automation commands
+  └── 📖  README.md         # This file
+```
+
+![-----------------------------------------------------](./img/green-gradient.png)
+
+## ✏️ Customizing Your Site
+
+### Content Pages
+
+All content is in the `content/` directory:
+
+- `_index.md` - Home page
+- `events.md` - Events listing
+- `about.md` - Team and member information
+- `rules.md` - Community guidelines
+- `case-studies.md` - Local project highlights
+- `community.md` - Join and contribute
+- `tutorials.md` - QGIS tutorials list
+- `blog/_index.md` - Blog intro and list
+
+You are free to edit or add new files as needed to customize your content. The files use Markdown with Hugo shortcodes.
+
+### Configuration
+
+Edit `config.toml` to customize:
+
+- Site title and URL
+- Menu structure
+- Colors and branding
+- Social media links
+- Analytics settings
+
+### Navigation menu
+
+Edit the `themes/qgis-website-theme/layouts/partials/menu.html` file to customize:
+
+- `logo-icon`: The logo on the main navigation menu (by default: QGIS logo)
+- `logo-link`: The link where the logo points to (by default: qgis.org). You can set it to `/` if you want to point the logo the homepage of your user group website.
+- `second-menu-prefix`: The link of this user group website (eg. https://sweden.qgis.org)
+- `secondary-menu-config`: The link to the `navigation.json` used for the mobile menu (See below). For example: https://raw.githubusercontent.com/qgis/QGIS-User-Group-Website/usergroup_switzerland/static/config/navigation.json
+
+Edit the `static/config/navigation.json` file to customize the secondary menu on mobile. This file should be updated whenever you modify your menu entries.
+
+### Images and Assets
+
+- Place images in `static/img/` or `content/`
+- Update hero images in page front matter
+- Replace the logo files
+- Add your own favicon
+
+### Styling
+
+The template uses the `qgis-website-theme` which provides:
+
+- Responsive design
+- Clean, modern look
+- Customizable colors
+- Reusable content blocks
+
+Colors and fonts can be customized in `config.toml` under `[params]`.
 
 ![-----------------------------------------------------](./img/green-gradient.png)
 
 
-## 🏃Before you start
+## 📜 License
 
-This web site is a static site built using [Hugo](https://gohugo.io/).
-
-![Hugo Logo](./img/hugo-logo.png) and using the [hugo bulma blocks theme](https://github.com/qgis/QGIS-Hugo-Website-Theme).
-
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 ![-----------------------------------------------------](./img/green-gradient.png)
 
+## 🧊 Using the Nix Shell
 
-## 🛒 Getting the Code
-
-development
-```
-git clone https://github.com/qgis/QGIS-User-Group-Website.git
-cd QGIS-User-Group-Website
-# To update the submodule
-git submodule update --init --recursive
-```
+Please refer to the [Nix section](./CONTRIBUTING.md#nix) in [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ![-----------------------------------------------------](./img/green-gradient.png)
 
+## ✨ Contributing
 
-## 🧑💻 Development
+We welcome contributions to improve this template!
 
-For Nix based development environment, please skip directly to the [Nix](#nix) section.
+- **For template improvements:** Submit PRs to the main branch
+- **For your user group site:** Work on your dedicated branch
 
-First install hugo for your local machine:
-
-**📝 Note:** we need to install the 'extended' hugo version which includes a SASS compiler. If you don't install the extended version you will get errors like this when compiling:
-
-```sh
-ERROR 2022/12/11 07:33:37 Rebuild failed: TOCSS: failed to transform 
-"css/style.scss" (text/x-scss). Check your Hugo installation; you need 
-the extended version to build SCSS/SASS.: this feature is not available 
-in your current Hugo version, see https://goo.gl/YMrWcn for more information
-```
-
-Currently, the website requires Hugo with a minimum version of `v0.139.0`. Ensure you have a compatible version installed to avoid any build issues.
-
-You can find the extended version `v0.139.0` [here](https://github.com/gohugoio/hugo/releases/tag/v0.139.0).
-
-
-### 🐧 Linux: 
-
-Download the latest version and then do 
-
-``sudo dpkg -i hugo_extended_<latest>_linux-amd64.deb``
-
-**📝 Note:** if your system has another version of Hugo, no need to mess up with docker, snap, nix. Just extract the binaries somewhere with `dpkg -x` .
-Example, assuming that you use a dedicated directory for your local binaries :
-
-```sh
-mkdir -p ~/apps/hugo_139/
-wget https://github.com/gohugoio/hugo/releases/download/v0.139.0/hugo_extended_0.139.3_linux-amd64.deb --output-document ~/apps/hugo_128/hugo_extended_0.139.3_linux-amd64.deb 
-dpkg -x hugo_extended_0.139.3_linux-amd64.deb
-~/apps/hugo_128/usr/local/bin/hugo server  
-```
-
-### 🪟 Windows
-
-We recommend using Windows Subsystem for Linux (WSL) for Hugo development on Windows instead of using Hugo packages for Windows.
-
-#### Setting Up QGIS Website Development Environment (WSL + Hugo)
-
-This guide provides a step-by-step workflow to set up a local development environment for the QGIS website using Windows Subsystem for Linux (WSL) and the Hugo static site generator.
-
----
-
-##### 1. Initialize WSL and Ubuntu
-WSL allows you to run a Linux environment directly on Windows without the overhead of a traditional virtual machine. You can install WSL and the specific Ubuntu distribution in a single step.
-
-1.  **Install Ubuntu 24.04 via WSL:** Open PowerShell (as a standard user) and run:
-    ```powershell
-    wsl --install Ubuntu-24.04
-    ```
-2.  **Verify & Reboot:** Check the status to ensure the subsystem is active:
-    ```powershell
-    wsl --status
-    ```
-    *Note: A system reboot is required after the initial installation to enable the necessary virtualization features.*
-
-    *Launch **Ubuntu 24.04** from your Start Menu to complete the initial Linux user profile setup (username and password).*
-
----
-
-##### 2. Install Build Essentials and Hugo
-The QGIS website requires `make` for automation and the `Hugo Extended` binary for SCSS/SASS processing.
-
-1.  **Install Make:** Update your package lists and install the make utility:
-    ```bash
-    sudo apt update && sudo apt install make
-    ```
-2.  **Download Hugo (Extended Version):**
-    * Check the latest version of Hugo at [https://github.com/gohugoio/hugo/releases](https://github.com/gohugoio/hugo/releases).
-    * From your Ubuntu terminal, download the **extended** version for your architecture (usually `amd64`) using `wget`:
-        ```bash
-        wget https://github.com/gohugoio/hugo/releases/download/v0.155.2/hugo_extended_0.155.2_linux-amd64.deb
-        ```
-    * Install the downloaded package:
-        ```bash
-        sudo dpkg -i hugo_extended_<version>_linux-amd64.deb
-        ```
-
----
-
-##### 3. Resolving Folder Permission Issues
-When working on a repository stored on your Windows file system (e.g., `/mnt/c/Users/...`), you may encounter errors during `git clone` or when Hugo tries to write to the disk. This is because WSL mounts Windows drives with different permission structures by default.
-
-To fix this, you must remount the drive with **metadata** enabled. This allows Linux to manage file permissions and ownership correctly on the Windows drive.
-
-1.  **Unmount the C: Drive:**
-    ```bash
-    sudo umount /mnt/c
-    ```
-2.  **Remount with Metadata:**
-    ```bash
-    sudo mount -t drvfs C: /mnt/c -o metadata
-    ```
-
-> **Note:** With these permissions set, you can now navigate to your project folder and clone the repository without write errors.
-
----
-
-##### 4. Clone and Launch the Website
-Once the permissions are configured, you can clone the repository and use the built-in `Makefile` commands to start the local development server.
-
-1.  **Navigate and Clone:**
-    ```bash
-    # Navigate to your preferred Windows directory
-    cd /mnt/c/Users/YourUsername/Documents
-
-    # Clone the repository
-    git clone https://github.com/QGIS/QGIS-User-Group-Website.git
-    cd QGIS-User-Group-Website
-    ```
-
-2.  **Run the Development Server:**
-    The QGIS repository uses `make` to simplify Hugo commands. Run the following to build the site and start the local server:
-    ```bash
-    make hugo-run-dev
-    ```
-
-Once the command finishes building, the website will usually be available at `http://localhost:1313`. Any changes you make to the files will automatically trigger a refresh in your browser.
-
-### 🍏 macOS: 
-
-[Follow these notes](https://gohugo.io/installation/macos/#prebuilt-binaries)
-
-### Nix
-
-Run the following command on this project root folder:
-
-```sh
-nix-shell # It will install all the dependecies
-hugo server # To run the local server
-```
+Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ![-----------------------------------------------------](./img/green-gradient.png)
 
-## ⚙️ Setting up VSCode
+## 🙋 Have Questions?
 
-If you are using VSCode, I recommend the following extensions:
-
-* Hugo Language and Syntax Support
-* Color Highlight
-
-Clone the repo:
-
-```
-git clone https://github.com/qgis/QGIS-User-Group-Website.git
-```
-
-Run the site:
-
-Press ```Ctl-Shift-D``` then choose the following runner:
-
-'Run dev using locally installed Hugo'
-
-the click the green triangle next to  the runner to start it.
-
-Once the site is running, you can open it at:
-
-<http://localhost:1313>
-
-The site will automatically refresh any page you have open if you edit it and save your work. Magical eh?
+- **Template questions:** Open an issue in this repository
+- **General QGIS questions:** Visit [qgis.org](https://qgis.org)
 
 ![-----------------------------------------------------](./img/green-gradient.png)
 
+## 🧑‍💻👩‍💻 Contributors
 
-## Run in other IDEs
-
-Use an appropriate Hugo plugin for your IDE, or run Hugo från the command line:
-
-```shell
-hugo server
-```
-
-You can then visit the hot-reloaded site in your browser at `http://localhost:1313/`
-
+- [Tim Sutton](https://github.com/timlinux) – Original QGIS Website author
+- [Lova Andriarimalala](https://github.com/Xpirix) – Template developer
+- [QGIS Contributors](https://github.com/qgis/GIS-User-Group-Website/graphs/contributors) – Community contributors
 
 ![-----------------------------------------------------](./img/green-gradient.png)
 
-## Running Playwright End to End (e2e) Tests
-
-Test files are located in ```playwright/ci-test/tests```.
-
-These tests exist to make sure code changes to this repository do not break how the site currently functions.
-They are intended to run on each commit to verify the site is working in the expected order.
-
-
-### Run tests with VSCode
-
-**Requirements:** NodeJS v18+
-
-1. **Install playwright:** If you haven't already installed Playwright, you can do so by running the following commands in `playwright/ci-test` directory.
-
-```bash
-cd playwright/ci-test
-npm install
-```
-
-2. **Install playwright browsers:**
-
-```bash
-npx playwright install --with-deps chromium
-```
-
-3. **Install the extension [Playwright Test for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright)**: This extension provides a seamless integration of Playwright testing into VSCode.
-
-
-4. **Open the Testing Tab:** In VSCode, click on the Testing icon in the Activity Bar on the side of the window. This will open the Testing tab.
-
-5. **Run Playwright Tests from the Testing Tab:**
-- In the Testing tab, you should see your Playwright tests listed. If not, ensure the browser is checked under Playwright > Project menu.
-- Click on the refresh button in the Testing tab to reload the tests.
-- You can run individual tests by clicking the play button next to the test name.
-- You can also run all tests by clicking the play button at the top of the Testing tab.
-
-
-6. **Debugging Tests:**
-
-- You can debug individual tests by clicking the debug icon (a small bug with a play button) next to the test name.
-- Make sure to set breakpoints in your test files before running the debugger.
-
-### Run tests with CLI
-
-By default, this will run in `headless` mode just as it is in CI.
-
-```bash
-./run-tests.sh
-```
-
-**NOTE:** To run it in `UI` mode, add the `--ui` tag to the script.
-
-```bash
-$PLAYWRIGHT \
-    test \
-    --ui \
-    --project chromium
-```
-
-Read more on testing [here](https://github.com/qgis/QGIS-User-Group-Website/blob/main/playwright/ci-test/README.md).
-
-### Running as github action
-
-There is a github action that will run the tests automatically on PR submission, merge.
-
-See ```.github/workflows/playwright-e2e.yml```
-
-![-----------------------------------------------------](./img/green-gradient.png)
-
-## Search Functionality 
-The search functionality uses both [FuseJS](https://fusejs.io/) and [MarkJS](https://markjs.io/).
-
-The search functionality code is based on this [Blog Post](https://makewithhugo.com/add-search-to-a-hugo-site/) and [GitHub Gist](https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae) by [Eddie Webb](https://twitter.com/eddturtle).
-
-Content folders need to be excluded from search, by making them [headless bundles](https://gohugo.io/content-management/page-bundles/#headless-bundle) - which we have done for the sustaining member and flagship user folders in content/. To make other content folders which are not rendered and included in search results, add an ```index.md``` file with the following content: ```headless = true```.
-
-![-----------------------------------------------------](./img/green-gradient.png)
-
-## Referencing URLs in templates
-
-The site needs to work in production, where the links of the site are all below the root URL, and in staging, where the site is deployed to GitHub pages in a subpath. To ensure both deployment strategies work, please use the following method of constructing URLs in templates.
-
-```html
-<a class="button is-primary" href="{{ "donate/" | absURL }}">
-```
-
-**Note:** We do not use a leading slash, only an ending slash.
-
-![-----------------------------------------------------](./img/green-gradient.png)
-
-
-## Styles (SASS/CSS)
-
-SASS for most components is stored in themes/qgis-website-theme/assets/sass/bulma/components/
-
-Some common styles are places in themes/qgis-website-theme/assets/sass/style.sass - this file is compiled as hugo template, hence has access to config.toml variables and hugo macroses
-
-Also some bulma theme overrides are placed in themes/qgis-website-theme/assets/css/custom.css
-
-![-----------------------------------------------------](./img/green-gradient.png)
-
-
-## 📁 File naming conventions
-
-* Separate words in file names with hyphens e.g. windows-download.md
-* Avoid abbreviations in the words of your files
-* Write file names in lower case only
-* No spaces in file names
-
-![-----------------------------------------------------](./img/green-gradient.png)
-
-## 💮 Changing the templates
-
-| Page type       | Path                                     |
-| --------------- | ---------------------------------------- |
-| Landing Page    | themes/qgis/layouts/index.html           |
-| Top Level Pages | themes/qgis/layouts/_default/single.html |
-
-![-----------------------------------------------------](./img/green-gradient.png)
-
-
-## 🏠 Editing the landing (home) page
-
-The layout of the landing page is themes/qgis-website-theme/layouts/index.html: the main page has many diverse blocks, that are not used anywhere else, hence its content is mostly in the partials.
-
-The ``content/_index.md`` contains the front matter of the page and the contents for the `feature` shortcodes. Just edit whatever you like there. The blocks shortcodes are described [here](https://github.com/qgis/QGIS-User-Group-Website/blob/main/docs/shortcodes.md)
-
-![-----------------------------------------------------](./img/green-gradient.png)
-
-
-## 📃 Adding a top level page
-
-### Create the content
-
-Content pages are stored in the ``content`` folder. The top level documents there will be rendered with the top level page theming.
-
-For example to add an about page, create ``content/about.md``
-
-The page will be accessible then at /about/
-
-### 🖼️ Referencing Images and Media
-
-Place images and media in ```static/img```. Everything in ```static``` is referenced
-from the top level of the site e.g.  ```static/img/foo.png``` would be referenced in
-markdown as ```/img/foo.png```.
-
-
-![-----------------------------------------------------](./img/green-gradient.png)
-
-## 📦 Blocks Shortcodes
-
-The site uses a number of shortcodes to create reusable blocks of content. These are defined in the ```themes/qgis-website-theme/layouts/shortcodes/``` folder.
-
-The shortcodes with screenshots are described [here](https://github.com/qgis/QGIS-User-Group-Website/blob/main/docs/shortcodes.md)
-
-<!-- 3rd level header with icon with title Reusable header web component -->
-### Reusable header web component
-
-TODO
-
-### Sidebar
-
-Sidebar is implemented in themes/qgis-website-theme/layouts/partials/sidebar.html
-
-Items are retrieved from config.toml under `[menu]` section. `weight` parameter defines the order of the item.
-
-To enable sidebar on the content page, use the following template:
-
-```
----
-type: "page"
-...
-sidebar: true
----
-{{< content-start  >}}
-
-... add content here ...
-
-{{< content-end  >}}
-```
-
-![-----------------------------------------------------](./img/green-gradient.png)
+Made with ❤️ by the QGIS Contributors.
