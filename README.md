@@ -49,7 +49,8 @@ The template uses Hugo static site generator with a clean, responsive design tha
 - Git
 - A text editor or an IDE (eg. VSCode)
 
-### Local Development
+### Local Development (for this template)
+***The steps below are ONLY for contributing to THIS template. If you want to initiate the website for your user group, please see the section 🛠️ Setting Up Your User Group Site***
 
 1. **Clone this repository:**
    ```bash
@@ -78,79 +79,37 @@ The template uses Hugo static site generator with a clean, responsive design tha
 
 ## 🛠️ Setting Up Your User Group Site
 
-### Step 1: Request a Branch
+### Step 1: User group recognition 
 
-To set up a website for your QGIS User Group:
+Before proceeding with the next steps, **please make sure** that your user group has been **officially recognized** by QGIS.org first.
 
-1. **Contact the QGIS Website Team:**
-   - Open an issue in [this repository](https://github.com/qgis/QGIS-User-Group-Website/issues) or
-   - Email the QGIS website team at [tim@kartoza.com](mailto:tim@kartoza.com) and [lova@kartoza.com](mailto:lova@kartoza.com)
-   - Specify your user group name and preferred subdomain (e.g., `sweden.qgis.org`)
+### Step 2: Create a repo from this template
 
-2. **Provide Information:**
-   - User Group name
-   - Country/region
-   - Preferred subdomain name
-   - Contact person(s) with GitHub usernames
+This repository is a template that you can use to create your user group's website repo from.
+For that:
 
-### Step 2: Branch Creation and Permissions
+1. From this repo homepage, on the top-left, click on **Use this template** > **Create a new repository**
+2. Create the new repo on your GitHub account and name it **QGIS-UG-Country-name**
+3. Clone your new repo and follow the steps in CONTRIBUTING.md to spin up your local environment
+4. Make all the necessary changes for your user group website:
 
-The QGIS team will:
-
-1. Create a dedicated branch for your user group (e.g., `usergroup/sweden`)
-2. Set up branch protection rules
-3. Grant you write permissions to your branch
-4. Configure GitHub Actions for automated deployment
-
-### Step 3: Configure Your Branch
-
-Once your branch is ready:
-
-1. **Clone and checkout your branch:**
-   ```bash
-   git clone https://github.com/qgis/QGIS-User-Group-Website.git
-   cd QGIS-User-Group-Website
-   git checkout usergroup/your-group-name
-   ```
-
-2. **Update configuration:**
    - Edit `config.toml` with your group details
    - Update the `baseURL` to match your subdomain
    - Customize the title and other settings
-
-3. **Customize content:**
    - Edit content pages in the `content/` directory
    - Add your team information
    - Update events and rules
    - Replace placeholder images
 
-4. **Commit and push:**
-   ```bash
-   git add .
-   git commit -m "Initial customization for [Your Group Name]"
-   git push origin usergroup/your-group-name
-   ```
+### Step 3: Transfer your repo to QGIS organization account
 
-### Step 4: Request Deployment
+Email the QGIS website team at [tim@kartoza.com](mailto:tim@kartoza.com), [lova@kartoza.com](mailto:lova@kartoza.com) and [marco@qgis.org](mailto:marco@qgis.org) to request for the transfer to QGIS GitHub account and specify the following information
+   - User Group name
+   - Country/region
+   - Preferred subdomain name
+   - Contact person(s) with GitHub usernames
+We will eventually contact you to initialize the transfer from your repo.
 
-After customizing your site:
-
-1. **Request subdomain deployment:**
-   - Contact the QGIS team to request deployment
-   - Provide your desired subdomain (e.g., `sweden.qgis.org`)
-
-2. **The QGIS team will:**
-   - Configure the subdomain on qgis.org
-   - Set up automated deployment from your branch
-   - Provide you with the live URL
-
-### Managing Your Branch
-
-You have full control over your branch:
-
-- **Push changes:** Changes pushed to your branch will automatically deploy
-- **Collaborate:** Add other team members as collaborators on your branch
-- **Keep updated:** Periodically merge updates from the main template branch to get new features
 
 ![-----------------------------------------------------](./img/green-gradient.png)
 
